@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe | プライベート美容室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-en">Luxe</span>
+        <span class="logo-ja">ラックス</span>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#concept">コンセプト</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#stylist">スタイリスト</a></li>
+          <li><a href="#contact">ご予約</a></li>
+          <li><a href="#footer">アクセス</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <p class="hero-sub">Private Hair Salon</p>
+        <h1 class="hero-title">あなただけの<br>特別な時間を</h1>
+        <p class="hero-desc">完全個室の空間で、丁寧に向き合う。<br>自分らしいスタイルを、ともに見つけましょう。</p>
+        <a href="#contact" class="btn-primary">ご予約・お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONCEPT ========== -->
+  <section id="concept">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Concept</p>
+        <h2 class="section-title">Luxeの<br>３つのこだわり</h2>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <div class="concept-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="28" height="28" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="10" y="10" width="16" height="16" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3>完全個室の<br>プライベート空間</h3>
+          <p>他のお客様を気にせず、リラックスしてお過ごしいただける完全個室。周りの目を気にせず、自分だけの時間をお楽しみください。</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4C18 4 8 10 8 20C8 25.5 12.5 30 18 30C23.5 30 28 25.5 28 20C28 10 18 4 18 4Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M18 14V22M14 18H22" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3>オーガニック製品<br>を使用</h3>
+          <p>髪と頭皮に優しいオーガニック認証製品のみを使用。繰り返しのカラーやパーマでダメージを受けた髪も、内側から美しく整えます。</p>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L20.5 13H28L22 17.5L24.5 24.5L18 20L11.5 24.5L14 17.5L8 13H15.5L18 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>駅徒歩３分の<br>好アクセス</h3>
+          <p>最寄り駅から徒歩わずか3分。お仕事帰りや休日のお出かけのついでにもお気軽にお立ち寄りいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section id="menu">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Menu &amp; Price</p>
+        <h2 class="section-title">メニュー・料金表</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Cut</h3>
+            <p class="menu-ja">カット</p>
+          </div>
+          <ul class="menu-list">
+            <li><span>カット</span><span>¥5,500</span></li>
+            <li><span>カット＋シャンプー</span><span>¥6,600</span></li>
+            <li><span>前髪カット</span><span>¥1,100</span></li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Color</h3>
+            <p class="menu-ja">カラー</p>
+          </div>
+          <ul class="menu-list">
+            <li><span>リタッチカラー</span><span>¥8,800〜</span></li>
+            <li><span>フルカラー</span><span>¥11,000〜</span></li>
+            <li><span>ハイライト</span><span>¥15,400〜</span></li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Perm</h3>
+            <p class="menu-ja">パーマ</p>
+          </div>
+          <ul class="menu-list">
+            <li><span>コールドパーマ</span><span>¥11,000〜</span></li>
+            <li><span>デジタルパーマ</span><span>¥16,500〜</span></li>
+            <li><span>縮毛矯正</span><span>¥19,800〜</span></li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Treatment</h3>
+            <p class="menu-ja">トリートメント</p>
+          </div>
+          <ul class="menu-list">
+            <li><span>ベーシック</span><span>¥3,300〜</span></li>
+            <li><span>プレミアム</span><span>¥5,500〜</span></li>
+            <li><span>集中ケア</span><span>¥8,800〜</span></li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Head Spa</h3>
+            <p class="menu-ja">ヘッドスパ</p>
+          </div>
+          <ul class="menu-list">
+            <li><span>30分コース</span><span>¥4,400</span></li>
+            <li><span>60分コース</span><span>¥7,700</span></li>
+            <li><span>90分コース</span><span>¥11,000</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="menu-note">※ 表示価格はすべて税込みです。髪の長さ・量によって料金が異なる場合があります。</p>
+    </div>
+  </section>
+
+  <!-- ========== STYLIST ========== -->
+  <section id="stylist">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Stylist</p>
+        <h2 class="section-title">スタイリスト紹介</h2>
+      </div>
+      <div class="stylist-card">
+        <div class="stylist-photo">
+          <img src="images/Gemini_Generated_Image_pm5ecipm5ecipm5e.png" alt="スタイリスト 山田花子" class="stylist-photo-img">
+        </div>
+        <div class="stylist-info">
+          <p class="stylist-role">Owner Stylist</p>
+          <h3 class="stylist-name">山田 花子</h3>
+          <p class="stylist-name-en">Hanako Yamada</p>
+          <div class="stylist-bio">
+            <p>都内有名サロンにて10年のキャリアを積んだのち、2020年に独立。「お客様一人ひとりと丁寧に向き合いたい」という想いから、完全個室のプライベートサロンを開業しました。</p>
+            <p>骨格や髪質を見極めたカウンセリングと、再現性の高いスタイル提案が得意です。特にナチュラル系のカラーや、くせ毛を活かしたスタイリングを得意としています。</p>
+          </div>
+          <div class="stylist-specialty">
+            <p class="specialty-label">得意なスタイル</p>
+            <ul>
+              <li>ナチュラル・ニュアンスカラー</li>
+              <li>くせ毛を活かしたスタイリング</li>
+              <li>小顔に見えるカット</li>
+              <li>ダメージレスなデジタルパーマ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Reservation &amp; Contact</p>
+        <h2 class="section-title">ご予約・お問い合わせ</h2>
+        <p class="section-desc">お気軽にご連絡ください。2営業日以内にご返信いたします。</p>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">お名前 <span class="required">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 花子" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号</label>
+            <input type="tel" id="phone" name="phone" placeholder="090-0000-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="menuSelect">ご希望のメニュー <span class="required">必須</span></label>
+          <select id="menuSelect" name="menu" required>
+            <option value="">選択してください</option>
+            <option value="cut">カット</option>
+            <option value="color">カラー</option>
+            <option value="perm">パーマ</option>
+            <option value="treatment">トリートメント</option>
+            <option value="headspa">ヘッドスパ</option>
+            <option value="other">その他・複数メニュー</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="datetime">ご希望の日時</label>
+          <input type="datetime-local" id="datetime" name="datetime">
+        </div>
+        <div class="form-group">
+          <label for="message">ご要望・ご質問</label>
+          <textarea id="message" name="message" rows="5" placeholder="髪の状態やご要望など、お気軽にご記入ください。"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">送信する</button>
+        </div>
+      </form>
+
+      <div id="formSuccess" class="form-success" hidden>
+        <div class="success-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 24L21 31L34 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="success-main">送信しました。</p>
+        <p class="success-sub">お問い合わせありがとうございます。<br>2営業日以内にご連絡いたします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <div class="footer-logo">
+          <span class="logo-en">Luxe</span>
+          <span class="logo-ja">ラックス</span>
+        </div>
+        <ul class="footer-details">
+          <li>
+            <span class="footer-label">住所</span>
+            <span>東京都〇〇区〇〇1-2-3 〇〇ビル2F</span>
+          </li>
+          <li>
+            <span class="footer-label">電話</span>
+            <span><a href="tel:0000000000">000-0000-0000</a></span>
+          </li>
+          <li>
+            <span class="footer-label">営業時間</span>
+            <span>10:00〜19:00（最終受付 18:00）</span>
+          </li>
+          <li>
+            <span class="footer-label">定休日</span>
+            <span>火曜日・第3月曜日</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-map">
+        <div class="map-placeholder">
+          <p>Google Map</p>
+          <p class="map-note">（Googleマップを埋め込みます）</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Luxe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
