@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>店舗情報 | Luxe 管理画面</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1 class="page-title">店舗情報</h1>
+      </header>
+      <div class="admin-content">
+        <div class="form-layout">
+
+          <!-- 編集フォーム -->
+          <div class="card">
+            <p class="card-title">基本情報</p>
+            <form id="storeForm">
+              <div class="form-group">
+                <label>住所</label>
+                <input type="text" id="address" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>電話番号</label>
+                <input type="tel" id="phone" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>営業時間（開始 / 終了）</label>
+                <div class="form-row">
+                  <input type="text" id="hoursOpen" class="form-control" placeholder="10:00">
+                  <input type="text" id="hoursClose" class="form-control" placeholder="19:00">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>最終受付</label>
+                <input type="text" id="lastOrder" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>定休日</label>
+                <input type="text" id="holidays" class="form-control">
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn-save">保存する</button>
+                <span class="save-note">※ 現在はプレビューのみ。DB実装後に保存できます。</span>
+              </div>
+            </form>
+          </div>
+
+          <!-- ライブプレビュー -->
+          <div class="preview-panel">
+            <div class="preview-header">TOPページ フッタープレビュー</div>
+            <div class="preview-body">
+              <div class="preview-logo-en">Luxe</div>
+              <div class="preview-details">
+                <div class="preview-detail-row">
+                  <span class="preview-detail-label">住所</span>
+                  <span class="preview-detail-value" id="prev-address"></span>
+                </div>
+                <div class="preview-detail-row">
+                  <span class="preview-detail-label">電話</span>
+                  <span class="preview-detail-value" id="prev-phone"></span>
+                </div>
+                <div class="preview-detail-row">
+                  <span class="preview-detail-label">営業時間</span>
+                  <span class="preview-detail-value" id="prev-hours"></span>
+                </div>
+                <div class="preview-detail-row">
+                  <span class="preview-detail-label">定休日</span>
+                  <span class="preview-detail-value" id="prev-holidays"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/site-data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script>
+    initAdmin();
+
+    // フォームに初期値をセット
+    const s = SITE_DATA.store;
+    document.getElementById('address').value  = s.address;
+    document.getElementById('phone').value     = s.phone;
+    document.getElementById('hoursOpen').value = s.hoursOpen;
+    document.getElementById('hoursClose').value= s.hoursClose;
+    document.getElementById('lastOrder').value = s.lastOrder;
+    document.getElementById('holidays').value  = s.holidays;
+
+    function updatePreview() {
+      const open  = document.getElementById('hoursOpen').value;
+      const close = document.getElementById('hoursClose').value;
+      const last  = document.getElementById('lastOrder').value;
+
+      document.getElementById('prev-address').textContent  = document.getElementById('address').value;
+      document.getElementById('prev-phone').textContent    = document.getElementById('phone').value;
+      document.getElementById('prev-hours').textContent    = `${open}〜${close}（最終受付 ${last}）`;
+      document.getElementById('prev-holidays').textContent = document.getElementById('holidays').value;
+    }
+
+    // 初回プレビュー
+    updatePreview();
+
+    // 入力のたびにプレビュー更新
+    document.getElementById('storeForm').addEventListener('input', updatePreview);
+
+    // 保存ボタン（見せかけ）
+    document.getElementById('storeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      showToast('保存しました（※ DB実装後に反映されます）');
+    });
+  </script>
+
+</body>
+</html>
