@@ -1,4 +1,27 @@
 /* ============================================================
+   数字フォント: Noto Serif JPを数字・記号にのみ適用
+   ============================================================ */
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url(https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bwxOubA.ttf) format('truetype');
+  font-weight: 100 500;
+  unicode-range: U+0030-0039, U+FF10-FF19, U+00A5, U+002C, U+003A;
+}
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url(https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzvPebA.ttf) format('truetype');
+  font-weight: 600 900;
+  unicode-range: U+0030-0039, U+FF10-FF19, U+00A5, U+002C, U+003A;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bwxOubA.ttf) format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  unicode-range: U+0030-0039, U+FF10-FF19, U+00A5, U+002C, U+003A;
+}
+
+/* ============================================================
    Variables
    ============================================================ */
 :root {
@@ -206,7 +229,7 @@ button { font-family: var(--font-ja); }
 #hero {
   height: 100svh;
   min-height: 580px;
-  background-image: url('images/Gemini_Generated_Image_2ufz4o2ufz4o2ufz.png');
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -592,6 +615,42 @@ textarea { resize: vertical; min-height: 130px; }
   font-size: 0.88rem;
   color: var(--text-light);
   line-height: 2;
+}
+
+/* コンタクトセクション: アクセス情報 */
+.contact-access {
+  max-width: 740px;
+  margin: 48px auto 0;
+  background-color: var(--white);
+  border: 1px solid var(--beige);
+  padding: 40px 60px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-access-item {}
+
+.contact-access-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--brown-mid);
+  margin-bottom: 8px;
+}
+
+.contact-access-text {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+  .contact-access {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 24px;
+  }
 }
 
 /* ============================================================
