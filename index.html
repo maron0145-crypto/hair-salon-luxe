@@ -85,6 +85,7 @@
           <p>最寄り駅から徒歩わずか3分。お仕事帰りや休日のお出かけのついでにもお気軽にお立ち寄りいただけます。</p>
         </div>
       </div>
+      <div class="concept-dots" id="conceptDots" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -152,6 +153,7 @@
           </ul>
         </div>
       </div>
+      <div class="menu-dots" id="menuDots" aria-hidden="true"></div>
       <p class="menu-note">※ 表示価格はすべて税込みです。髪の長さ・量によって料金が異なる場合があります。</p>
     </div>
   </section>
@@ -211,6 +213,7 @@
           <div class="form-group">
             <label for="phone">電話番号</label>
             <input type="tel" id="phone" name="phone" placeholder="090-0000-0000">
+            <p class="field-error-msg" id="phoneError" hidden></p>
           </div>
         </div>
         <div class="form-group">
@@ -228,6 +231,7 @@
         <div class="form-group">
           <label for="datetime">ご希望の日時</label>
           <input type="datetime-local" id="datetime" name="datetime">
+          <p class="field-error-msg" id="datetimeError" hidden></p>
         </div>
         <div class="form-group">
           <label for="message">ご要望・ご質問</label>
@@ -237,25 +241,6 @@
           <button type="submit" class="btn-primary">送信する</button>
         </div>
       </form>
-
-      <div class="contact-access">
-        <div class="contact-access-item">
-          <p class="contact-access-label">住所</p>
-          <p class="contact-access-text">東京都千代田区永田町2-9-8<br>ラックスビル2F</p>
-        </div>
-        <div class="contact-access-item">
-          <p class="contact-access-label">アクセス</p>
-          <p class="contact-access-text">東京メトロ各線<br>永田町駅 3番出口より徒歩3分<br>溜池山王駅 9番出口より徒歩5分</p>
-        </div>
-        <div class="contact-access-item">
-          <p class="contact-access-label">営業時間</p>
-          <p class="contact-access-text">10:00〜19:00<br>（最終受付 18:00）</p>
-        </div>
-        <div class="contact-access-item">
-          <p class="contact-access-label">定休日</p>
-          <p class="contact-access-text">火曜日・第3月曜日</p>
-        </div>
-      </div>
 
       <div id="formSuccess" class="form-success" hidden>
         <div class="success-icon">
@@ -311,6 +296,16 @@
       <p>&copy; 2024 Luxe. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ========== ERROR MODAL ========== -->
+  <div id="errorModal" class="error-modal" hidden>
+    <div class="error-modal-overlay" id="errorModalOverlay"></div>
+    <div class="error-modal-inner" role="alertdialog" aria-modal="true" aria-labelledby="errorModalTitle">
+      <p class="error-modal-title" id="errorModalTitle">入力を確認してください</p>
+      <ul class="error-modal-list" id="errorModalList"></ul>
+      <button type="button" class="btn-primary error-modal-close" id="errorModalClose">閉じる</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
