@@ -117,7 +117,7 @@ button { font-family: var(--font-ja); }
 }
 
 .btn-primary:hover {
-  background-color: transparent;
+  background-color:var(--brown-pale);
   color: var(--brown);
 }
 
